@@ -1,0 +1,26 @@
+<?php
+
+// app/Http/Resources/UserResource.php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class UserResource extends JsonResource
+{
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'documento' => $this->documento,
+            'nombres' => $this->nombres,
+            'telefono' => $this->telefono,
+            'email' => $this->email,
+            'direccion' => $this->direccion,
+            'ciudad' => $this->ciudad,
+            'semestre' => $this->semestre,
+            // Agrega más campos o relaciones según sea necesario
+        ];
+    }
+}
+
